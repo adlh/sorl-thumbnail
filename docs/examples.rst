@@ -74,6 +74,13 @@ Setting format and using the is_portrait filter::
         </div>
     {% endif %}
 
+Using HTML filter::
+
+    {{ text|html_thumbnails }}
+
+Using markdown filter::
+
+    {{ text|markdown_thumbnails }}
 
 .. highlight:: python
 
@@ -111,7 +118,7 @@ project with only small code changes::
 
 Admin examples
 ==============
-Recommended usage using ``sorl.thumbnail.admin.AdminImageMixin``::
+Recommended usage using ``sorl.thumbnail.admin.AdminImageMixin`` (note that this requires use of ``sorl.thumbnail.ImageField`` in your models as explained above)::
 
     # myapp/admin.py
     from django.contrib import admin
